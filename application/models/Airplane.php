@@ -11,10 +11,10 @@ class Airplane extends CI_Model
     // The data comes from http://www.imdb.com/title/tt0094012/
     // expressed using long-form array notaiton in case students use PHP 5.x
     var $data = array(
-        '1'	 => array('id'	 => '101', 'manufacturer'	 => 'Cessna',
+        '1'	 => array('id'	 => '101', 'planeName' => 'Caravan','manufacturer'	 => 'Cessna',
             'model'	 => 'Grand Caravan EX', 'price' => '2300', 'seats' => '14', 'reach' => '1689',
             'cruise' => '340', 'takeoff' => '660', 'hourly' => '389'),
-        '2'	 => array('id'	 => '121', 'manufacturer'	 => 'Cessna',
+        '2'	 => array('id'	 => '121', 'planeName' => 'Citation', 'manufacturer'	 => 'Cessna',
             'model'	 => 'Citation M2', 'price' => '3200', 'seats' => '7', 'reach' => '1550',
             'cruise' => '748', 'takeoff' => '978', 'hourly' => '1122'),
     );
