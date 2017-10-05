@@ -3,6 +3,7 @@
 
 /**
  * This is a model for airport.
+ * Include 4 different airports
  *
  * @author Hansol
  */
@@ -25,11 +26,13 @@ class Airport extends CI_Model
         '4' => array('id' => 'YYF', 'community' => 'Penticton',
             'airport' => 'Penticton Regional Airport', 'region' => '8', 'coordinates' => '49\u00b027\u203245\u2033N119\u00b036\u203208\u2033W',
             'runway' => '1829', 'airline' => 'warbler')
+
     );
 
     // Constructor
     public function __construct()
     {
+        
         parent::__construct();
         // inject each "record" key into the record itself, for ease of presentation
         foreach ($this->data as $key => $record) {
