@@ -11,3 +11,8 @@ Changelog format: Markdown
 ## Vincent Lee - 2017-10-05 3:11 PM
 - Set base template
 - Added external stylesheets and scripts
+
+## Matthew Li - 2017-10-05 4:17PM
+- Added Info controller
+- Fixed naming conventions in models
+

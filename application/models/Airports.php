@@ -5,7 +5,7 @@
  *
  * @author Hansol
  */
-class Airport extends CI_Model
+class Airports extends CI_Model
 {
     // The data comes from https://wacky.jlparry.com/info/airports
     // expressed using long-form array notaiton in case students use PHP 5.x

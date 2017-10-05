@@ -5,7 +5,7 @@
  *
  * @author clint
  */
-class Airplane extends CI_Model
+class Airplanes extends CI_Model
 {
 
     // The data comes from http://www.imdb.com/title/tt0094012/
