@@ -7,3 +7,7 @@ Changelog format: Markdown
 
 ## Hansol Lee - 2017-10-05 2:00PM
 - Added Airports model
+
+## Matthew Li - 2017-10-05 4:17PM
+- Added Info controller
+- Fixed naming conventions in models
