@@ -38,7 +38,7 @@ class Flights extends CI_Model
         '5'	 => array('id'	 => '5', 'departureTime' => '11:30', 'arrivalTime' => '12:50',
             'departureAirport' => 'YYF', 'arrivalAirport' => 'YPK', 'plane' => 'Citation'),
     );
-
+    var $count;
 
 
     // Constructor
@@ -52,6 +52,7 @@ class Flights extends CI_Model
             $record['key'] = $key;
             $this->data[$key] = $record;
         }
+        $this->count = count($this->data);
     }
 
     // retrieve a single quote, null if not found
