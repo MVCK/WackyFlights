@@ -17,27 +17,27 @@ class Info extends CI_Controller
     {
         $this->load->model('airplanes');
         $data = json_encode($this->airplanes->all());
-        return $data;
+        echo $data;
     }
 
     function airports()
     {
         $this->load->model('airports');
         $data = json_encode($this->airports->all());
-        return $data;
+        echo $data;
     }
 
     function fleet()
     {
         $this->load->model('fleet');
         $data = json_encode($this->fleet->all());
-        return $data;
+        echo $data;
     }
 
     function flights()
     {
         $this->load->model('flightschedule');
         $data = json_encode($this->flights->all());
-        return $data;
+        echo $data;
     }
 }
