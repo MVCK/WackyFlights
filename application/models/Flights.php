@@ -7,6 +7,7 @@
  */
 class Flights extends CI_Model
 {
+    //each airport visisted twice ***
     //no departures before 08:00
     //no landings after 22:00
     //minimum 30 minutes between a plane's landing and any subsequent departure
@@ -29,13 +30,29 @@ class Flights extends CI_Model
         '3'	 => array('id'	 => '3', 'departureTime' => '13:30', 'arrivalTime' => '15:20',
             'departureAirport' => 'ZMH', 'arrivalAirport' => 'YPK', 'plane' => 'Caravan'),
 
+        //YPK => YCW
+        '4'	 => array('id'	 => '4', 'departureTime' => '15:50', 'arrivalTime' => '16:30',
+            'departureAirport' => 'YPK', 'arrivalAirport' => 'YCW', 'plane' => 'Caravan'),
+        //YCW => ZMH
+        '5'	 => array('id'	 => '5', 'departureTime' => '17:00', 'arrivalTime' => '19:30',
+            'departureAirport' => 'YCW', 'arrivalAirport' => 'ZMH', 'plane' => 'Caravan'),
+        //ZMH => YPK
+        '6'	 => array('id'	 => '6', 'departureTime' => '20:00', 'arrivalTime' => '21:50',
+            'departureAirport' => 'ZMH', 'arrivalAirport' => 'YPK', 'plane' => 'Caravan'),
+
 
 
         //YPK => YYF
-        '4'	 => array('id'	 => '4', 'departureTime' => '09:30', 'arrivalTime' => '10:50',
+        '7'	 => array('id'	 => '7', 'departureTime' => '09:30', 'arrivalTime' => '10:50',
             'departureAirport' => 'YPK', 'arrivalAirport' => 'YYF', 'plane' => 'Citation'),
         //YYF => YPK
-        '5'	 => array('id'	 => '5', 'departureTime' => '11:30', 'arrivalTime' => '12:50',
+        '8'	 => array('id'	 => '8', 'departureTime' => '11:30', 'arrivalTime' => '12:50',
+            'departureAirport' => 'YYF', 'arrivalAirport' => 'YPK', 'plane' => 'Citation'),
+        //YPK => YYF
+        '9'	 => array('id'	 => '9', 'departureTime' => '13:30', 'arrivalTime' => '14:50',
+            'departureAirport' => 'YPK', 'arrivalAirport' => 'YYF', 'plane' => 'Citation'),
+        //YYF => YPK
+        '10'	 => array('id'	 => '10', 'departureTime' => '15:30', 'arrivalTime' => '16:50',
             'departureAirport' => 'YYF', 'arrivalAirport' => 'YPK', 'plane' => 'Citation'),
     );
     var $count;
