@@ -19,7 +19,12 @@ class Welcome extends Application
 	 */
 	public function index()
 	{
-		$this->data['pagebody'] = 'dashboard';
+        $this->load->model('airplanes');
+        $this->load->model('airports');
+        $this->data['airplanes'] = $this->airplanes->all();
+        $this->data['airports'] = $this->airports->all();
+        $this->data['pagetitle'] = 'Home';
+        $this->data['pagebody'] = 'dashboard';
 		$this->data['pagefooter'] = 'layout/footer';
 		$this->data['pageheader'] = 'layout/header';
 		$this->render();
