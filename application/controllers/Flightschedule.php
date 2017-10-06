@@ -2,7 +2,7 @@
 
 defined('BASEPATH') OR exit('No direct script access allowed');
 
-class FlightSchedule extends Application
+class Flightschedule extends Application
 {
 
     /**

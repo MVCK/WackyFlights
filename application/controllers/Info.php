@@ -36,7 +36,7 @@ class Info extends CI_Controller
 
     function flights()
     {
-        $this->load->model('FlightSchedule');
+        $this->load->model('flightschedule');
         $data = json_encode($this->flights->all());
         return $data;
     }
