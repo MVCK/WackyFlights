@@ -35,7 +35,13 @@ class Airplanes extends CI_Model
     // retrieve a single quote, null if not found
     public function get($which)
     {
-        return !isset($this->data[$which]) ? null : $this->data[$which];
+        foreach($this->data as $key => $value) {
+            if($value['id'] == $which) {
+                return $value;
+            }
+        }
+        return null;
+        //return !isset($this->data[0][]) ? null : $this->data[$which];
     }
 
     // retrieve all of the quotes
