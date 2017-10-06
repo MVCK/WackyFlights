@@ -16,3 +16,6 @@ Changelog format: Markdown
 - Added Info controller
 - Fixed naming conventions in models
 
+## Vincent Lee - 2017-10-05 11:00 PM
+- Added flight, airport, airplane info on dashboard home
+- 
