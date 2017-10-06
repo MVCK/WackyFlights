@@ -41,7 +41,13 @@
                     <span class="nav-link-text">Fleet</span>
                 </a>
             </li>
-            <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Info API">
+            <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Info">
+                <a class="nav-link" href="#">
+                    <i class="fa fa-fw fa-info-circle"></i>
+                    <span class="nav-link-text">Info</span>
+                </a>
+            </li>
+<!--            <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Info API">
                 <a class="nav-link nav-link-collapse collapsed" data-toggle="collapse" href="#collapseComponents" data-parent="#exampleAccordion">
                     <i class="fa fa-fw fa-wrench"></i>
                     <span class="nav-link-text">Info API</span>
@@ -54,8 +60,8 @@
                         <a href="cards.html">Cards</a>
                     </li>
                 </ul>
-            </li>
-            <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Example Pages">
+            </li>-->
+ <!--           <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Example Pages">
                 <a class="nav-link nav-link-collapse collapsed" data-toggle="collapse" href="#collapseExamplePages" data-parent="#exampleAccordion">
                     <i class="fa fa-fw fa-file"></i>
                     <span class="nav-link-text">Example Pages</span>
@@ -111,7 +117,7 @@
                     <i class="fa fa-fw fa-link"></i>
                     <span class="nav-link-text">Link</span>
                 </a>
-            </li>
+            </li>-->
         </ul>
         <ul class="navbar-nav sidenav-toggler">
             <li class="nav-item">
@@ -121,7 +127,7 @@
             </li>
         </ul>
         <ul class="navbar-nav ml-auto">
-            <li class="nav-item dropdown">
+            <!--<li class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle mr-lg-2" id="messagesDropdown" href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                     <i class="fa fa-fw fa-envelope"></i>
                     <span class="d-lg-none">Messages
@@ -213,7 +219,7 @@
             <li class="nav-item">
                 <a class="nav-link" data-toggle="modal" data-target="#exampleModal">
                     <i class="fa fa-fw fa-sign-out"></i>Logout</a>
-            </li>
+            </li>-->
         </ul>
     </div>
 </nav>
