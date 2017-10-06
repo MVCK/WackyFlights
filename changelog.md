@@ -16,3 +16,6 @@ Changelog format: Markdown
 - Added Info controller
 - Fixed naming conventions in models
 
+## Clint Bock - 2017-10-06 9:36 AM
+- Added the Flights Model and mock data 
+
