@@ -18,4 +18,7 @@ Changelog format: Markdown
 
 ## Vincent Lee - 2017-10-05 11:00 PM
 - Added flight, airport, airplane info on dashboard home
-- 
+- Updated flights to show departure and arrival airport
+
+## Clint Bock - 2017-10-06 9:36 AM
+- Added the Flights Model and mock data 

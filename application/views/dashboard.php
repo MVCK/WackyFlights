@@ -43,13 +43,13 @@
                     <i class="fa fa-fw fa-plane"></i>
                 </div>
                 <div class="mr-5">
-                    <?php foreach($this->airports->data as $airport): ?>
-                        <?php echo $airport['airline'] .' to '.$airport['id'];?><br/>
+                    <?php foreach($this->flights->data as $flight): ?>
+                        <?php echo $flight['departureAirport'] .' to '.$flight['arrivalAirport'];?><br/>
                     <?php endforeach ?>
                 </div>
             </div>
             <a class="card-footer text-white clearfix small z-1">
-                <span class="float-left"><?php echo sizeof($this->airports->data);?> flights a day</span>
+                <span class="float-left"><?php echo sizeof($this->flights->data);?> flights a day</span>
               </span>
             </a>
         </div>

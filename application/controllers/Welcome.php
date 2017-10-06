@@ -21,6 +21,7 @@ class Welcome extends Application
 	{
         $this->load->model('airplanes');
         $this->load->model('airports');
+        $this->load->model('flights');
         $this->data['airplanes'] = $this->airplanes->all();
         $this->data['airports'] = $this->airports->all();
         $this->data['pagetitle'] = 'Home';
