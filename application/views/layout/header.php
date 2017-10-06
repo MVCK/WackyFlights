@@ -30,7 +30,7 @@
                 </a>
             </li>
             <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Flights">
-                <a class="nav-link" href="#">
+                <a class="nav-link" href="/flightschedule">
                     <i class="fa fa-fw fa-area-chart"></i>
                     <span class="nav-link-text">Flights</span>
                 </a>

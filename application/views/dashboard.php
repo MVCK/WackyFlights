@@ -6,8 +6,7 @@
                     <i class="fa fa-fw fa-map-marker"></i>
                 </div>
                 <div class="mr-5">
-                    Base Airport<br/>
-                    <?php echo $this->airports->data['1']['community'].' '.$this->airports->data['1']['id']?>
+                    Base Airport<br/> YPK Pitt Meadows
                 </div>
             </div>
             <a class="card-footer text-white clearfix small z-1" href="#">
@@ -25,13 +24,13 @@
                     <i class="fa fa-fw fa-list"></i>
                 </div>
                 <div class="mr-5">
-                    <?php foreach($this->airports->data as $airport): ?>
-                        <?php echo $airport['community'] .' '.$airport['id'];?>
-                    <?php endforeach ?>
+                    {airports}
+                        {community} {id}
+                    {/airports}
                 </div>
             </div>
             <a class="card-footer text-white clearfix small z-1">
-                <span class="float-left">Flights to <?php echo sizeof($this->airports->data)?> Airports</span>
+                <span class="float-left">Flights to {airportcount} Airports</span>
               </span>
             </a>
         </div>
@@ -43,13 +42,13 @@
                     <i class="fa fa-fw fa-plane"></i>
                 </div>
                 <div class="mr-5">
-                    <?php foreach($this->flights->data as $flight): ?>
-                        <?php echo $flight['departureAirport'] .' to '.$flight['arrivalAirport'];?><br/>
-                    <?php endforeach ?>
+                    {flights}
+                        {departureAirport} to {arrivalAirport} <br/>
+                    {/flights}
                 </div>
             </div>
             <a class="card-footer text-white clearfix small z-1">
-                <span class="float-left"><?php echo sizeof($this->flights->data);?> flights a day</span>
+                <span class="float-left">{flightcount} flights a day</span>
               </span>
             </a>
         </div>
@@ -70,45 +69,6 @@
             </a>
         </div>
     </div>
-</div>
-<div class="card mb-3">
-    <div class="card-header">
-        <i class="fa fa-table"></i> Airplanes in our fleet</div>
-    <div class="card-body">
-        <div class="table-responsive">
-            <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
-                <thead>
-                    <tr>
-                        <th>Plane Name</th>
-                        <th>Manufacturer</th>
-                        <th>Model</th>
-                        <th>Price</th>
-                        <th>Seats</th>
-                        <th>Reach</th>
-                        <th>Cruise</th>
-                        <th>Takeoff</th>
-                        <th>Hourly</th>
-                    </tr>
-                </thead>
-                <tbody>
-                <?php foreach ($this->airplanes->data as $key=>$airplane):?>
-                    <tr>
-                        <td><?php echo $airplane['planeName'] ?></td>
-                        <td><?php echo $airplane['manufacturer']?></td>
-                        <td><?php echo $airplane['model']?></td>
-                        <td><?php echo $airplane['price']?></td>
-                        <td><?php echo $airplane['seats']?></td>
-                        <td><?php echo $airplane['reach']?></td>
-                        <td><?php echo $airplane['cruise']?></td>
-                        <td><?php echo $airplane['takeoff']?></td>
-                        <td><?php echo $airplane['hourly']?></td>
-                    </tr>
-                <?php endforeach;?>
-                </tbody>
-            </table>
-        </div>
-    </div>
-    <div class="card-footer small text-muted">Updated yesterday at 11:59 PM</div>
 </div>
 <!-- TODO Add financials
 <div class="row">
