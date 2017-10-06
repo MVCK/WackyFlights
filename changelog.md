@@ -23,6 +23,14 @@ Changelog format: Markdown
 ## Clint Bock - 2017-10-06 9:36 AM
 - Added the Flights Model and mock data 
 
+
+## Hansol Lee - 2017-10-06 12:31 PM
+- Added controller for fleet
+- Added controller for fleetdetail
+- Added fleet view page
+- Added fleet detail page
+
 ## Vincent Lee - 2017-10-06 12:55 PM 
 - Made fixes to use codeigniter formatting
 - Made Flight Schedule page
+
