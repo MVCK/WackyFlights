@@ -1,15 +1,12 @@
 <?php
 
 /**
- * Airplane model represents a plane in our airlane
+ * Airplane model represents a plane in our airplane
  *
  * @author clint
  */
 class Airplanes extends CI_Model
 {
-
-    // The data comes from http://www.imdb.com/title/tt0094012/
-    // expressed using long-form array notaiton in case students use PHP 5.x
     var $data = array(
         '1'	 => array('id'	 => '101', 'planeName' => 'Caravan','manufacturer'	 => 'Cessna',
             'model'	 => 'Grand Caravan EX', 'price' => '2300', 'seats' => '14', 'reach' => '1689',
@@ -19,7 +16,9 @@ class Airplanes extends CI_Model
             'cruise' => '748', 'takeoff' => '978', 'hourly' => '1122'),
     );
 
-    // Constructor
+    /*
+     * Constructor for the airplane model
+     */
     public function __construct()
     {
         parent::__construct();
@@ -32,11 +31,15 @@ class Airplanes extends CI_Model
         }
     }
 
-    // retrieve a single quote, null if not found
+    /*
+     * Retrieve a single airplane, null if not found
+     */
     public function get($which)
     {
-        foreach($this->data as $key => $value) {
-            if($value['id'] == $which) {
+        foreach($this->data as $key => $value)
+        {
+            if($value['id'] == $which)
+            {
                 return $value;
             }
         }
@@ -44,7 +47,9 @@ class Airplanes extends CI_Model
         //return !isset($this->data[0][]) ? null : $this->data[$which];
     }
 
-    // retrieve all of the quotes
+    /*
+     * Retrieve all of the airplanes
+     */
     public function all()
     {
         return $this->data;

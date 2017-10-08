@@ -6,16 +6,7 @@ class Welcome extends Application
 {
 
     /**
-     * Fleet Page for this controller.
-     *
-     * Maps to the following URL
-     * 		http://example.com/
-     * 	- or -
-     * 		http://example.com/welcome/index
-     *
-     * So any other public methods not prefixed with an underscore will
-     * map to /welcome/<method_name>
-     * @see https://codeigniter.com/user_guide/general/urls.html
+     * Loads the fleet of airplanes for the airline
      */
     public function index()
     {

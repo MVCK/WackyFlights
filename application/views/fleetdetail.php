@@ -1,5 +1,4 @@
 <div class="row">
-
     <div class="card-body">
         <div class="table-responsive">
             <table class="table table-default" id="dataTable" width="100%" cellspacing="0">
@@ -18,16 +17,16 @@
                     </tr>
                     </thead>
                     <tbody>
-                    <th>{id}</th>
-                    <th>{planeName}</th>
-                    <th>{manufacturer}</th>
-                    <th>{model}</th>
-                    <th>{price}</th>
-                    <th>{seats}</th>
-                    <th>{reach}</th>
-                    <th>{cruise}</th>
-                    <th>{takeoff}</th>
-                    <th>{hourly}</th>
+                        <th>{id}</th>
+                        <th>{planeName}</th>
+                        <th>{manufacturer}</th>
+                        <th>{model}</th>
+                        <th>{price}</th>
+                        <th>{seats}</th>
+                        <th>{reach}</th>
+                        <th>{cruise}</th>
+                        <th>{takeoff}</th>
+                        <th>{hourly}</th>
                     </tbody>
             <table/>
                 <div class="text-center">

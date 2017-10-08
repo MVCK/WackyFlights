@@ -3,7 +3,7 @@
 defined('BASEPATH') OR exit('No direct script access allowed');
 
 /**
- * A ser
+ * A service controller providing info in JSON format
  */
 
 class Info extends CI_Controller
@@ -41,5 +41,20 @@ class Info extends CI_Controller
         $this->load->model('flights');
         $data = json_encode($this->flights->all());
         echo $data;
+    }
+
+    /**
+     * Returns an error message as this is just a service controller
+     */
+    function index()
+    {
+        echo "
+        {
+            \"error\": 
+            {
+                \"code\": 403,
+                \"message\": \"No access allowed, sorry!\"
+            }
+        }";
     }
 }

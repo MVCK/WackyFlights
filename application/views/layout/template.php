@@ -1,5 +1,4 @@
 {header}
-
         <div class="container-fluid">
             <!-- Breadcrumbs-->
             <ol class="breadcrumb">
@@ -10,6 +9,5 @@
             </ol>
             <!-- Icon Cards-->
             {content}
-
         </div>
 {footer}

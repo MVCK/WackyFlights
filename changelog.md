@@ -34,7 +34,9 @@ Changelog format: Markdown
 - Made fixes to use codeigniter formatting
 - Made Flight Schedule page
 
-## Matthew Li 2017-10-06-9:30 PM
+## Matthew Li 2017-10-06 9:30 PM
 - Added Info page
 - Updated side bar links
-- Added commiting.
+
+## Matthew Li 2017-10-08 9:18 AM
+- Added an error page for a plane id that doesn't exist

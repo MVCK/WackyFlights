@@ -26,6 +26,7 @@
                 <div class="mr-5">
                     {airports}
                         {community} {id}
+                        <br />
                     {/airports}
                 </div>
             </div>
