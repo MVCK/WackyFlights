@@ -42,9 +42,9 @@
                 </a>
             </li>
             <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Info">
-                <a class="nav-link" href="#">
+                <a class="nav-link" href="/about">
                     <i class="fa fa-fw fa-info-circle"></i>
-                    <span class="nav-link-text">Info</span>
+                    <span class="nav-link-text">About Us</span>
                 </a>
             </li>
 <!--            <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Info API">

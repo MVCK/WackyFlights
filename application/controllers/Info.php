@@ -13,6 +13,9 @@ class Info extends CI_Controller
         parent::__construct();
     }
 
+    /**
+     * Return all the airplanes in JSON format
+     */
     function airplanes()
     {
         $this->load->model('airplanes');
@@ -20,6 +23,9 @@ class Info extends CI_Controller
         echo $data;
     }
 
+    /**
+     * Returns all the airports in JSON format
+     */
     function airports()
     {
         $this->load->model('airports');
@@ -27,16 +33,12 @@ class Info extends CI_Controller
         echo $data;
     }
 
-    function fleet()
-    {
-        $this->load->model('fleet');
-        $data = json_encode($this->fleet->all());
-        echo $data;
-    }
-
+    /**
+     * Returns all the flights in JSON format
+     */
     function flights()
     {
-        $this->load->model('flightschedule');
+        $this->load->model('flights');
         $data = json_encode($this->flights->all());
         echo $data;
     }
