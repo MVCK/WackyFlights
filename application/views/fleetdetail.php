@@ -17,16 +17,16 @@
                     </tr>
                     </thead>
                     <tbody>
-                        <th>{id}</th>
-                        <th>{planeName}</th>
-                        <th>{manufacturer}</th>
-                        <th>{model}</th>
-                        <th>{price}</th>
-                        <th>{seats}</th>
-                        <th>{reach}</th>
-                        <th>{cruise}</th>
-                        <th>{takeoff}</th>
-                        <th>{hourly}</th>
+                        <td>{id}</td>
+                        <td>{planeName}</td>
+                        <td>{manufacturer}</td>
+                        <td>{model}</td>
+                        <td>{price}</td>
+                        <td>{seats}</td>
+                        <td>{reach}</td>
+                        <td>{cruise}</td>
+                        <td>{takeoff}</td>
+                        <td>{hourly}</td>
                     </tbody>
             <table/>
                 <div class="text-center">
