@@ -34,3 +34,6 @@ Changelog format: Markdown
 - Made fixes to use codeigniter formatting
 - Made Flight Schedule page
 
+## Matthew Li 2017-10-06-9:30 PM
+- Added Info page
+- Updated side bar links
