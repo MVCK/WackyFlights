@@ -37,3 +37,4 @@ Changelog format: Markdown
 ## Matthew Li 2017-10-06-9:30 PM
 - Added Info page
 - Updated side bar links
+- Added commiting.
