@@ -7,10 +7,6 @@
  */
 class Airports extends CI_Model
 {
-    // The data comes from https://wacky.jlparry.com/info/airports
-    // expressed using long-form array notaiton in case students use PHP 5.x
-
-
     var $data = array(
         '1' => array('id' => 'YPK', 'community' => 'Pitt Meadows',
             'airport' => 'Pitt Meadows Airport', 'region' => '2', 'coordinates' => '49\u00b012\u203258\u2033N122\u00b042\u203236\u2033W',
@@ -24,28 +20,34 @@ class Airports extends CI_Model
         '4' => array('id' => 'YYF', 'community' => 'Penticton',
             'airport' => 'Penticton Regional Airport', 'region' => '8', 'coordinates' => '49\u00b027\u203245\u2033N119\u00b036\u203208\u2033W',
             'runway' => '1829', 'airline' => 'warbler')
-
     );
 
-    // Constructor
+    /*
+     * Construct for the airport model
+     */
     public function __construct()
     {
 
         parent::__construct();
         // inject each "record" key into the record itself, for ease of presentation
-        foreach ($this->data as $key => $record) {
+        foreach ($this->data as $key => $record)
+        {
             $record['key'] = $key;
             $this->data[$key] = $record;
         }
     }
 
-    // retrieve a single quote, null if not found
+    /*
+     * retrieve a single airport, null if not found
+     */
     public function get($which)
     {
         return !isset($this->data[$which]) ? null : $this->data[$which];
     }
 
-    // retrieve all of the quotes
+    /*
+     * retrieve all of the airports
+     */
     public function all()
     {
         return $this->data;

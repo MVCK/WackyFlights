@@ -6,7 +6,7 @@ class About extends Application
 {
 
     /**
-     * Index Page for this controller.
+     * Loads some info about the app
      */
     public function index()
     {

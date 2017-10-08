@@ -1,18 +1,15 @@
-
-<div class="card mb-3">
-    <div class="card-header">
-        <i class="fa fa-table"></i> Airplanes in our fleet</div>
+<div class="row">
     <div class="card-body">
         <div class="table-responsive">
             <table class="table table-hover" id="dataTable" width="100%" cellspacing="0">
                 <thead>
-                <tr>
-                    <th>ID</th>
-                    <th>Plane Name</th>
-                    <th>Manufacturer</th>
-                    <th>Model</th>
-                    <th></th>
-                </tr>
+                    <tr>
+                        <th>ID</th>
+                        <th>Plane Name</th>
+                        <th>Manufacturer</th>
+                        <th>Model</th>
+                        <th></th>
+                    </tr>
                 </thead>
                 <tbody>
                     {airplanes}
@@ -28,5 +25,4 @@
             </table>
         </div>
     </div>
-
 </div>

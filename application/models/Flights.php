@@ -18,7 +18,6 @@ class Flights extends CI_Model
     //base airport: YPK
     //target airports: YCW, ZMH, YYF
 
-
     var $data = array(
         //YPK => YCW
         '1'	 => array('id'	 => '1', 'departureTime' => '09:00', 'arrivalTime' => '09:40',
@@ -72,13 +71,17 @@ class Flights extends CI_Model
         $this->count = count($this->data);
     }
 
-    // retrieve a single quote, null if not found
+    /*
+     * retrieve a single flight, null if not found
+     */
     public function get($which)
     {
         return !isset($this->data[$which]) ? null : $this->data[$which];
     }
 
-    // retrieve all of the quotes
+    /*
+     * Retrieves all of the quotes
+     */
     public function all()
     {
         return $this->data;
