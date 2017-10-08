@@ -7,7 +7,7 @@
             <table class="table table-hover" id="dataTable" width="100%" cellspacing="0">
                 <thead>
                 <tr>
-                    <th>Id<th>
+                    <th>ID</th>
                     <th>Plane Name</th>
                     <th>Manufacturer</th>
                     <th>Model</th>
