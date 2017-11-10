@@ -47,6 +47,22 @@
                     <span class="nav-link-text">About Us</span>
                 </a>
             </li>
+            <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Components">
+                <a class="nav-link nav-link-collapse collapsed" data-toggle="collapse" href="#collapseComponents" data-parent="#exampleAccordion">
+                    <i class="fa fa-fw fa-wrench"></i>
+                    <span class="nav-link-text">User Roles</span>
+                </a>
+                <ul class="sidenav-second-level collapse" id="collapseComponents">
+                    <li><a class="nav-link-text" href="/roles/actor/Guest">Guest</a></li>
+                    <li><a class="nav-link-text" href="/roles/actor/Owner">Owner</a></li>
+                </ul>
+            </li>
+            <!-- THIS IS FOR TESTING PURPOSES ONLY TO SEE WHAT ROLE YOU ARE IN DELETE AFTER -->
+            <?php 
+                
+                $role = $this->session->userdata('userrole');
+                var_dump($role);
+            ?>
 <!--            <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Info API">
                 <a class="nav-link nav-link-collapse collapsed" data-toggle="collapse" href="#collapseComponents" data-parent="#exampleAccordion">
                     <i class="fa fa-fw fa-wrench"></i>
