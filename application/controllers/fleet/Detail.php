@@ -33,8 +33,10 @@ class Detail extends Application
         $form_data = $this->input->post();
         $this->load->model('airplanes');
         $source = $this->airplanes->get($form_data['id']);
-
+        
+        
         foreach($form_data as $key => $value){
+            
             $source[$key] = $value;
         }
         // $tmp = 'Location: '. APPPATH . "./fleet/detail/" . $form_data['id'];

@@ -10,7 +10,10 @@ class Welcome extends Application
      */
     public function index()
     {
-
+        $this->data["addButton"] = $this->parser->parse('emptydiv', [], true);
+        if($this->session->userdata('userrole') == "Owner"){
+            $this->data["addButton"] .= $this->parser->parse("addButton", [], true);
+        }
         $this->load->model('airplanes');
         $rows = array();
         $params = array('airplanes'=> $rows);//array of arrays
@@ -21,5 +24,6 @@ class Welcome extends Application
         $this->data['pageheader'] = 'layout/header';
         $this->render();
     }
+    
 
 }

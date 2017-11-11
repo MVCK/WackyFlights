@@ -57,12 +57,6 @@
                     <li><a class="nav-link-text" href="/roles/actor/Owner">Owner</a></li>
                 </ul>
             </li>
-            <!-- THIS IS FOR TESTING PURPOSES ONLY TO SEE WHAT ROLE YOU ARE IN DELETE AFTER -->
-            <?php 
-                
-                $role = $this->session->userdata('userrole');
-                var_dump($role);
-            ?>
 <!--            <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Info API">
                 <a class="nav-link nav-link-collapse collapsed" data-toggle="collapse" href="#collapseComponents" data-parent="#exampleAccordion">
                     <i class="fa fa-fw fa-wrench"></i>

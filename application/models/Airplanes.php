@@ -30,7 +30,7 @@ class Airplanes extends CI_Model
             $this->data[$key] = $record;
         }
     }
-
+    
     /*
      * Retrieve a single airplane, null if not found
      */
