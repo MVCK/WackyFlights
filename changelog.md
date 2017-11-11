@@ -44,3 +44,9 @@ Changelog format: Markdown
 
 ## Hansol Lee 2017-11-10 4:15 PM
 - Added Flight bookings page
+
+## Vincent Lee 2017-11-11 12:00 PM
+- Fixed Flight bookings query  
+- Changed layout of Flight details page  
+- Migrated to CSV_Models  
+- Linked Flights page to editing page  
