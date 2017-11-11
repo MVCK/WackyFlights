@@ -8,7 +8,7 @@
 class Airplanes extends CI_Model
 {
     var $data = array(
-        '1'	 => array('id'	 => '101', 'planeName' => 'Caravan','manufacturer'	 => 'Cessna',
+        '1'	 => array('id' => '101', 'planeName' => 'Caravan','manufacturer'	 => 'Cessna',
             'model'	 => 'Grand Caravan EX', 'price' => '2300', 'seats' => '14', 'reach' => '1689',
             'cruise' => '340', 'takeoff' => '660', 'hourly' => '389'),
         '2'	 => array('id'	 => '121', 'planeName' => 'Citation', 'manufacturer'	 => 'Cessna',

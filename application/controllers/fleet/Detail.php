@@ -9,8 +9,9 @@ class Detail extends Application
      */
     public function index($id)
     {
+        $this->data["editButton"] = $this->parser->parse('emptydiv', [], true);
         if($this->session->userdata('userrole') == "Owner"){
-            $this->data["editButton"] = false;
+            $this->data["editButton"] .= $this->parser->parse("editButton", [], true);
         }
         $this->load->model('airplanes');
         $source = $this->airplanes->get($id);
@@ -28,12 +29,17 @@ class Detail extends Application
         }
         $this->render();
     }
-    public function submit(){
+    public function submit() {
         $form_data = $this->input->post();
-        var_dump($form_data);
         $this->load->model('airplanes');
         $source = $this->airplanes->get($form_data['id']);
-        var_dump(" ____________________");
-        var_dump($source);
+
+        foreach($form_data as $key => $value){
+            $source[$key] = $value;
+        }
+        // $tmp = 'Location: '. APPPATH . "./fleet/detail/" . $form_data['id'];
+        redirect('/fleet', 'refresh');
+        
+
     }
 }

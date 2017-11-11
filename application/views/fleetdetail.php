@@ -19,7 +19,7 @@
                     </thead>
                     
                     <tbody>
-                        <td><input name="id" value="{id}"></td>
+                        <td>{id}<input type="hidden" name="id" value="{id}"></td>
                         <td><input name="planeName" value="{planeName}"/></td>
                         <td><input name="manufacturer" value="{manufacturer}"/></td>
                         <td><input name="model" value="{model}"/></td>
@@ -38,4 +38,6 @@
 
     </div>
 </div>
-<button type="submit">Submit</button>
+<div>   </div>
+{editButton}
+</form>
