@@ -15,6 +15,9 @@ class Detail extends Application
         }
         $this->load->model('airplanes');
         $source = $this->airplanes->get($id);
+        if(!$source) {
+            $source = $this->airplanes->find($id);
+        }
         $this->data['pagetitle'] = 'Fleet Detail';
         $this->data['pagefooter'] = 'layout/footer';
         $this->data['pageheader'] = 'layout/header';
@@ -27,21 +30,41 @@ class Detail extends Application
         {
             $this->data['pagebody'] = 'error';
         }
+        if(!isset($this->data['error'])) {
+            $this->data['error'] = $this->parser->parse("emptydiv", [], true);
+        }
         $this->render();
     }
+
     public function submit() {
+
         $form_data = $this->input->post();
         $this->load->model('airplanes');
-        $source = $this->airplanes->get($form_data['id']);
-        
-        
-        foreach($form_data as $key => $value){
-            
-            $source[$key] = $value;
+        $this->load->model('plane');
+
+        $this->load->library('form_validation');
+        $this->form_validation->set_rules($this->airplanes->rules());
+
+        $plane = array();
+        $plane = array_merge($plane, $form_data);
+        $plane = (object) $plane;  // convert back to object
+        if($this->form_validation->run()) {
+            if (empty($plane->id)) {
+                $plane->id = $this->airplanes->highest() + 1;
+                $this->airplanes->add($plane);
+            } else {
+                $this->airplanes->update($plane);
+            }
+        }
+        if(validation_errors()) {
+            $this->data['error'] = validation_errors();
+        }
+        if(isset($plane->id)) {
+            $this->index($plane->id);
+
+        } else {
+            redirect('/fleet', 'refresh');
         }
         // $tmp = 'Location: '. APPPATH . "./fleet/detail/" . $form_data['id'];
-        redirect('/fleet', 'refresh');
-        
-
     }
 }

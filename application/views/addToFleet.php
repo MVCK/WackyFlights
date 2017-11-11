@@ -1,12 +1,10 @@
-<form name ="userinput" action="/fleet/add/submit/" method="post">
+<form name ="userinput" action="/fleet/detail/submit/" method="POST">
 <div style="overflow:scroll;" class="row">
     <div class="card-body">
         <div class="table-responsive">
+            <input type="hidden" name="id"/>
+
             <table class="table table-default" id="dataTable" width="100%" cellspacing="0">
-                <tr>
-                    <th>ID</th>
-                    <td><input name="id"></td>
-                </tr>
                 <tr>
                     <th>Plane Name</th>
                     <td><input name="planeName"/></td>
