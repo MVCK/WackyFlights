@@ -35,6 +35,12 @@
                     <span class="nav-link-text">Flights</span>
                 </a>
             </li>
+            <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Flights">
+                <a class="nav-link" href="/flightbookings">
+                    <i class="fa fa-fw fa-plane"></i>
+                    <span class="nav-link-text">Flight bookings</span>
+                </a>
+            </li>
             <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Fleet">
                 <a class="nav-link" href="/fleet">
                     <i class="fa fa-fw fa-table"></i>

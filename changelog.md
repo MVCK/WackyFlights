@@ -40,3 +40,7 @@ Changelog format: Markdown
 
 ## Matthew Li 2017-10-08 9:18 AM
 - Added an error page for a plane id that doesn't exist
+
+
+## Hansol Lee 2017-11-10 4:15 PM
+- Added Flight bookings page
