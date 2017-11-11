@@ -57,7 +57,6 @@
                 for(var match in campaigns) {
                     count++;
                     var rowspan = campaigns[match].length;
-                    console.log(rowspan);
                     var body = document.createElement('TBODY');
                     for(var item in campaigns[match]) {
                         var flightinfo = campaigns[match][item];
