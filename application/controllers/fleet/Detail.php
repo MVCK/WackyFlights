@@ -9,6 +9,9 @@ class Detail extends Application
      */
     public function index($id)
     {
+        if($this->session->userdata('userrole') == "Owner"){
+            $this->data["editButton"] = false;
+        }
         $this->load->model('airplanes');
         $source = $this->airplanes->get($id);
         $this->data['pagetitle'] = 'Fleet Detail';
@@ -24,5 +27,13 @@ class Detail extends Application
             $this->data['pagebody'] = 'error';
         }
         $this->render();
+    }
+    public function submit(){
+        $form_data = $this->input->post();
+        var_dump($form_data);
+        $this->load->model('airplanes');
+        $source = $this->airplanes->get($form_data['id']);
+        var_dump(" ____________________");
+        var_dump($source);
     }
 }
