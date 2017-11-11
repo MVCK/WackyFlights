@@ -11,7 +11,7 @@ class Flight extends Entity {
 
     public function setId($value)
     {
-        if($value < 0) {
+        if(!is_numeric($value) || $value < 0) {
             $this->id = false;
             return false;
         }
@@ -21,30 +21,54 @@ class Flight extends Entity {
 
     public function setDepartureTime($value)
     {
+        if(!preg_match('#^[01]?[0-9]|2[0-3]):[0-5][0-9](:[0-5][0-9])?$#',$value)) {
+            $this->departureTime = false;
+            return false;
+        }
         $this->departureTime = $value;
         return true;
     }
 
     public function setArrivalTime($value)
     {
+        if(!preg_match('#^[01]?[0-9]|2[0-3]):[0-5][0-9](:[0-5][0-9])?$#',$value)) {
+            $this->arrivalTime = false;
+            return false;
+        }
         $this->arrivalTime = $value;
         return true;
     }
 
     public function setDepartureAirport($value)
     {
+        $this->load->model('airports');
+        $airports = $this->airports->all();
+        if(array_search($value, array_column($airports, 'id')) == false) {
+            $this->departureAirport = false;
+            return false;
+        }
         $this->departureAirport = $value;
         return true;
     }
 
     public function setArrivalAirport($value)
     {
+        $this->load->model('airports');
+        $airports = $this->airports->all();
+        if(array_search($value, array_column($airports, 'id')) == false) {
+            $this->arrivalAirport = false;
+            return false;
+        }
         $this->arrivalAirport = $value;
         return true;
     }
 
     public function setPlane($value)
     {
+        if(empty($value) || trim($value) == false) {
+            $this->plane = false;
+            return false;
+        }
         $this->plane = $value;
         return true;
     }

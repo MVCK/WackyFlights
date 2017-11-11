@@ -18,6 +18,7 @@
 <!-- Navigation-->
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top" id="mainNav">
     <a class="navbar-brand" href="/">WackyFlights MVCK</a>
+    <div style="position:absolute;right:15px;color:white;">Welcome, {role}</div>
     <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
     </button>
@@ -63,12 +64,6 @@
                     <li><a class="nav-link-text" href="/roles/actor/Owner">Owner</a></li>
                 </ul>
             </li>
-            <!-- THIS IS FOR TESTING PURPOSES ONLY TO SEE WHAT ROLE YOU ARE IN DELETE AFTER -->
-            <?php 
-                
-                $role = $this->session->userdata('userrole');
-                var_dump($role);
-            ?>
 <!--            <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Info API">
                 <a class="nav-link nav-link-collapse collapsed" data-toggle="collapse" href="#collapseComponents" data-parent="#exampleAccordion">
                     <i class="fa fa-fw fa-wrench"></i>

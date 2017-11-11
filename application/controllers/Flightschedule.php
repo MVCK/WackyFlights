@@ -18,5 +18,6 @@ class Flightschedule extends Application
         $this->data['pageheader'] = 'layout/header';
         $this->render();
     }
+    
 
 }
