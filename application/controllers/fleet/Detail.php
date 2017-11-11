@@ -59,8 +59,12 @@ class Detail extends Application
         if(validation_errors()) {
             $this->data['error'] = validation_errors();
         }
-        $this->index($plane->id);
+        if(isset($plane->id)) {
+            $this->index($plane->id);
+
+        } else {
+            redirect('/fleet', 'refresh');
+        }
         // $tmp = 'Location: '. APPPATH . "./fleet/detail/" . $form_data['id'];
-        //redirect('/fleet', 'refresh');
     }
 }
