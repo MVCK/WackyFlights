@@ -1,1 +1,1 @@
-<a href="/fleet/add/index"><input type="submit" value="Add Plane"/></a>
+<a href="/fleet/add/index" class="btn btn-primary">Add Plane</a>
