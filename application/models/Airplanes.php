@@ -43,6 +43,13 @@ class Airplanes extends CI_Model
                 return $value;
             }
         }
+        foreach($this ->data as $key => $value){
+
+            if($value['planeName'] == $which)
+            {
+                return $value;
+            }
+        }
         return null;
         //return !isset($this->data[0][]) ? null : $this->data[$which];
     }
