@@ -5,61 +5,40 @@
  *
  * @author clint
  */
-class Airplanes extends CI_Model
+class Airplanes extends CSV_Model
 {
-    var $data = array(
-        '1'	 => array('id' => '101', 'planeName' => 'Caravan','manufacturer'	 => 'Cessna',
-            'model'	 => 'Grand Caravan EX', 'price' => '2300', 'seats' => '14', 'reach' => '1689',
-            'cruise' => '340', 'takeoff' => '660', 'hourly' => '389'),
-        '2'	 => array('id'	 => '121', 'planeName' => 'Citation', 'manufacturer'	 => 'Cessna',
-            'model'	 => 'Citation M2', 'price' => '3200', 'seats' => '7', 'reach' => '1550',
-            'cruise' => '748', 'takeoff' => '978', 'hourly' => '1122'),
-    );
-
     /*
      * Constructor for the airplane model
      */
     public function __construct()
     {
-        parent::__construct();
-
-        // inject each "record" key into the record itself, for ease of presentation
-        foreach ($this->data as $key => $record)
-        {
-            $record['key'] = $key;
-            $this->data[$key] = $record;
-        }
+        parent::__construct(APPPATH . '../data/airplanes.csv', 'id');
     }
-    
-    /*
-     * Retrieve a single airplane, null if not found
-     */
-    public function get($which)
+
+    public function rules()
     {
-        foreach($this->data as $key => $value)
-        {
-            if($value['id'] == $which)
-            {
-                return $value;
+        $config = array(
+            ['field' => 'planeName', 'label' => 'Plane Name', 'rules' => 'required|alpha_numeric_spaces|min_length[1]|max_length[64]'],
+            ['field' => 'manufacturer', 'label' => 'Manufacturer', 'rules' => 'required|alpha_numeric_spaces|min_length[1]|max_length[64]'],
+            ['field' => 'model', 'label' => 'Model', 'rules' => 'required|alpha_numeric_spaces|min_length[1]|max_length[64]'],
+            ['field' => 'price', 'label' => 'Price', 'rules' => 'required|integer|greater_than[0]'],
+            ['field' => 'seats', 'label' => 'Seats', 'rules' => 'required|integer|greater_than[1]'],
+            ['field' => 'reach', 'label' => 'Reach', 'rules' => 'required|integer|greater_than[300]'],
+            ['field' => 'cruise', 'label' => 'Cruise', 'rules' => 'required|integer|greater_than[300]'],
+            ['field' => 'takeoff', 'label' => 'Takeoff', 'rules' => 'required|integer|greater_than[300]'],
+            ['field' => 'hourly', 'label' => 'Hourly', 'rules' => 'required|integer|greater_than[300]'],
+        );
+        return $config;
+    }
+
+    public function find($value) {
+        foreach($this->all() as $plane) {
+            foreach($plane as $key => $val) {
+                if($value == $val) {
+                    return $plane;
+                }
             }
         }
-        foreach($this ->data as $key => $value){
-
-            if($value['planeName'] == $which)
-            {
-                return $value;
-            }
-        }
-        return null;
-        //return !isset($this->data[0][]) ? null : $this->data[$which];
+        return false;
     }
-
-    /*
-     * Retrieve all of the airplanes
-     */
-    public function all()
-    {
-        return $this->data;
-    }
-
 }

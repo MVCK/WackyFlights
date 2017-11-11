@@ -1,7 +1,9 @@
-<form name ="userinput" action="/fleet/detail/submit/" method="post">
-<div style="overflow:scroll;" class="row">
+<form name ="userinput" action="/fleet/detail/submit/" method="POST">
+<div class="row">
     <div class="card-body">
         <div class="table-responsive">
+            {error}
+
             <table class="table table-default" id="dataTable" width="100%" cellspacing="0">
                 <tr>
                     <th>ID</th>
