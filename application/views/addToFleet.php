@@ -1,4 +1,4 @@
-<form name ="userinput" action="/fleet/detail/submit/" method="post">
+<form name ="userinput" action="/fleet/add/submit/" method="post">
 <div style="overflow:scroll;" class="row">
     <div class="card-body">
         <div class="table-responsive">
@@ -19,16 +19,16 @@
                     </thead>
                     
                     <tbody>
-                        <td>{id}<input type="hidden" name="id" value="{id}"></td>
-                        <td><input name="planeName" value="{planeName}"/></td>
-                        <td><input name="manufacturer" value="{manufacturer}"/></td>
-                        <td><input name="model" value="{model}"/></td>
-                        <td><input name="price" value="{price}"/></td>
-                        <td><input name="seats" value="{seats}"/></td>
-                        <td><input name="reach" value="{reach}"/></td>
-                        <td><input name="cruise" value="{cruise}"/></td>
-                        <td><input name="takeoff" value="{takeoff}"/></td>
-                        <td><input name="hourly" value="{hourly}"/></td>
+                        <td><input name="id"></td>
+                        <td><input name="planeName"></td>
+                        <td><input name="manufacturer"></td>
+                        <td><input name="model"></td>
+                        <td><input name="price"></td>
+                        <td><input name="seats"></td>
+                        <td><input name="reach"></td>
+                        <td><input name="cruise"></td>
+                        <td><input name="takeoff"></td>
+                        <td><input name="hourly"></td>
                     </tbody>
             <table/>
                 <div class="text-center">
@@ -39,5 +39,5 @@
     </div>
 </div>
 <div>   </div>
-{editButton}
+<button type="submit">Add</button>
 </form>

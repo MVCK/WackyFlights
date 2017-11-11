@@ -1,0 +1,1 @@
+<a href="/fleet/detail/submit/"><input type="submit" value="Edit"/></a>
