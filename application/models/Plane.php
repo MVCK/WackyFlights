@@ -83,12 +83,7 @@ class Plane extends Entity {
 
     public function setSeats($value)
     {
-        if(!is_numeric($value)) {
-            $this->seats = false;
-            return false;
-        }
-
-        if($value < 1) {
+        if(!is_numeric($value) || $value < 1) {
             $this->seats = false;
             return false;
         }
