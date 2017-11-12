@@ -21,7 +21,7 @@ class Flight extends Entity {
 
     public function setDepartureTime($value)
     {
-        if(!preg_match('#^[01]?[0-9]|2[0-3]):[0-5][0-9](:[0-5][0-9])?$#',$value)) {
+        if(!preg_match('(0[8-9]:[0-5][0-9]|1[0-9]:[0-5][0-9]|2[0-3]:[0-5][0-9])',$value)) {
             $this->departureTime = false;
             return false;
         }
@@ -31,7 +31,7 @@ class Flight extends Entity {
 
     public function setArrivalTime($value)
     {
-        if(!preg_match('#^[01]?[0-9]|2[0-3]):[0-5][0-9](:[0-5][0-9])?$#',$value)) {
+        if(!preg_match('(0[0-9]:[0-5][0-9]|1[0-9]:[0-5][0-9]|2[0-1]:[0-5][0-9]|22:00)',$value)) {
             $this->arrivalTime = false;
             return false;
         }
@@ -43,7 +43,7 @@ class Flight extends Entity {
     {
         $this->load->model('airports');
         $airports = $this->airports->all();
-        if(array_search($value, array_column($airports, 'id')) == false) {
+        if(array_search($value, array_column($airports, 'id')) === false) {
             $this->departureAirport = false;
             return false;
         }
@@ -55,7 +55,7 @@ class Flight extends Entity {
     {
         $this->load->model('airports');
         $airports = $this->airports->all();
-        if(array_search($value, array_column($airports, 'id')) == false) {
+        if(array_search($value, array_column($airports, 'id')) === false) {
             $this->arrivalAirport = false;
             return false;
         }
@@ -69,6 +69,13 @@ class Flight extends Entity {
             $this->plane = false;
             return false;
         }
+
+        $copy = str_replace(" ", "", $value);
+        if(!ctype_alnum($copy)) {
+            $this->planeName = false;
+            return false;
+        }
+
         $this->plane = $value;
         return true;
     }
