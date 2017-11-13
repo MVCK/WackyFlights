@@ -16,7 +16,7 @@ class Info extends CI_Controller
     /**
      * Return all the airplanes in JSON format
      */
-    function airplanes()
+    function fleet()
     {
         $this->load->model('airplanes');
         $data = json_encode($this->airplanes->all());

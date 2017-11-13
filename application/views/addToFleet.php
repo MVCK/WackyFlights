@@ -1,49 +1,45 @@
 <form name ="userinput" action="/fleet/detail/submit/" method="POST">
-<div class="row">
+<div style="overflow:scroll;" class="row">
     <div class="card-body">
         <div class="table-responsive">
-            {error}
+            <input type="hidden" name="id"/>
 
             <table class="table table-default" id="dataTable" width="100%" cellspacing="0">
                 <tr>
-                    <th>ID</th>
-                    <td>{id}<input type="hidden" name="id" value="{id}"></td>
-                </tr>
-                <tr>
                     <th>Plane Name</th>
-                    <td><input name="planeName" value="{planeName}"/></td>
+                    <td><input name="planeName"/></td>
                 </tr>
                 <tr>
                     <th>Manufacturer</th>
-                    <td><input name="manufacturer" value="{manufacturer}"/></td>
+                    <td><input name="manufacturer"/></td>
                 </tr>
                 <tr>
                     <th>Model</th>
-                    <td><input name="model" value="{model}"/></td>
+                    <td><input name="model" /></td>
                 </tr>
                 <tr>
                     <th>Price</th>
-                    <td><input name="price" value="{price}"/></td>
+                    <td><input name="price" /></td>
                 </tr>
                 <tr>
                     <th>Seats</th>
-                    <td><input name="seats" value="{seats}"/></td>
+                    <td><input name="seats"/></td>
                 </tr>
                 <tr>
                     <th>Reach</th>
-                    <td><input name="reach" value="{reach}"/></td>
+                    <td><input name="reach" /></td>
                 </tr>
                 <tr>
                     <th>Cruise</th>
-                    <td><input name="cruise" value="{cruise}"/></td>
+                    <td><input name="cruise" /></td>
                 </tr>
                 <tr>
                     <th>Takeoff</th>
-                    <td><input name="takeoff" value="{takeoff}"/></td>
+                    <td><input name="takeoff" /></td>
                 </tr>
                 <tr>
                     <th>Hourly</th>
-                    <td><input name="hourly" value="{hourly}"/></td>
+                    <td><input name="hourly" /></td>
                 </tr>
             <table/>
                 <div class="text-center">
@@ -54,5 +50,5 @@
     </div>
 </div>
 <div>   </div>
-{editButton}
+<button type="submit" class="btn btn-primary">Add</button>
 </form>

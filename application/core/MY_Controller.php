@@ -32,6 +32,7 @@ class Application extends CI_Controller
 	 */
 	function render($template = 'layout/template')
 	{
+	    $this->data['role'] = $this->session->userdata('userrole');
 		$this->data['content'] = $this->parser->parse($this->data['pagebody'], $this->data, true);
 		$this->data['footer'] = $this->parser->parse($this->data['pagefooter'], $this->data, true);
 		$this->data['header'] = $this->parser->parse($this->data['pageheader'], $this->data, true);

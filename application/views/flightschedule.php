@@ -15,7 +15,7 @@
                 <tbody>
                     {flights}
                         <tr>
-                            <td>{id}</td>
+                            <td><a href="/fleet/detail/{plane}">{id}</a></td>
                             <td>{departureTime}</td>
                             <td>{arrivalTime}</td>
                             <td>{departureAirport}</td>
