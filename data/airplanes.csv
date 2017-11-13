@@ -1,4 +1,3 @@
 id,planeName,manufacturer,model,price,seats,reach,cruise,takeoff,hourly
 101,Caravan,Cessna,"Grand Caravan EX",2300,14,1689,434,660,389
 121,Citation,Cessna,"Citation M2",3200,7,1550,748,978,1122
-122,Test,Model,Test,3000,3000,3000,3000,3000,3000
