@@ -54,4 +54,5 @@ Changelog format: Markdown
 
 ## Hansol Lee 2017-11-12 8:54 PM
 - Edited homepage dashboard to show all info 
+- Fixed flightbookings table row name
 

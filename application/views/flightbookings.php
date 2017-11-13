@@ -81,8 +81,8 @@
                         if(item == 0) {row.appendChild(flightOptionNumber) };
 
                         row.appendChild(bodyDestination);
-                        row.appendChild(bodyArrival);
                         row.appendChild(bodyDepartTime);
+                        row.appendChild(bodyArrival);
                         row.appendChild(bodyArrivalTime);
                         body.appendChild(row);
                         table.append(body);
