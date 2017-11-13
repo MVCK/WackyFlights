@@ -25,6 +25,13 @@ class Plane extends Entity {
             $this->planeName = false;
             return false;
         }
+
+        $copy = str_replace(" ", "", $value);
+        if(!ctype_alnum($copy)) {
+            $this->planeName = false;
+            return false;
+        }
+
         $this->planeName = $value;
         return true;
     }
@@ -35,6 +42,13 @@ class Plane extends Entity {
             $this->manufacturer = false;
             return false;
         }
+
+        $copy = str_replace(" ", "", $value);
+        if(!ctype_alnum($copy)) {
+            $this->planeName = false;
+            return false;
+        }
+
         $this->manufacturer = $value;
         return true;
     }
@@ -45,16 +59,24 @@ class Plane extends Entity {
             $this->model = false;
             return false;
         }
+
+        $copy = str_replace(" ", "", $value);
+        if(!ctype_alnum($copy)) {
+            $this->planeName = false;
+            return false;
+        }
+        
         $this->model = $value;
         return true;
     }
 
     public function setPrice($value)
     {
-        if(!is_numeric($value) || $value < 1) {
+        if(!is_numeric($value) || $value < 0) {
             $this->price = false;
             return false;
         }
+
         $this->price = $value;
         return true;
     }
@@ -65,6 +87,7 @@ class Plane extends Entity {
             $this->seats = false;
             return false;
         }
+
         $this->seats = $value;
         return true;
     }
