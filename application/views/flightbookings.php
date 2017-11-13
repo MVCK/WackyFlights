@@ -30,8 +30,8 @@
             <tr>
                 <th>Option</th>
                 <th>Departure</th>
-                <th>Departure Time</th>
                 <th>Arrival</th>
+                <th>Departure Time</th>
                 <th>Arrival Time</th>
             </tr>
             </thead>
