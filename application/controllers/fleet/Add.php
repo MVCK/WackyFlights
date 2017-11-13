@@ -17,6 +17,10 @@ class Add extends Application
     
         $this->render();
     }
+
+    /**
+     * Adds an airplane to the fleet
+     */
     public function submit() {
         //new airplane created
         $form_data = $this->input->post();
