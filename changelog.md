@@ -63,4 +63,5 @@ Changelog format: Markdown
 
 ## Matthew Li 2017-11-12 10:00 PM
 - Retrieved valid airplane data from wacky server instead of hard coding
+- Added travis-ci and phpunit via Composer
 
