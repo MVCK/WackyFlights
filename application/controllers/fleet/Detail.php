@@ -36,6 +36,9 @@ class Detail extends Application
         $this->render();
     }
 
+    /**
+     * Edits the details of a plane
+     */
     public function submit() {
 
         $form_data = $this->input->post();

@@ -21,6 +21,9 @@ class Flightbookings extends Application
         $this->render();
     }
 
+    /**
+     * Matches flights based on desired form data
+     */
     public function matchFlights()
     {
         $data = $this->input->post();
