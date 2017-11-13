@@ -49,4 +49,9 @@ Changelog format: Markdown
 - Fixed Flight bookings query  
 - Changed layout of Flight details page  
 - Migrated to CSV_Models  
-- Linked Flights page to editing page  
+- Linked Flights page to editing page 
+ 
+
+## Hansol Lee 2017-11-12 8:54 PM
+- Edited homepage dashboard to show all info 
+
