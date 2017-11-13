@@ -6,7 +6,14 @@
                     <i class="fa fa-fw fa-map-marker"></i>
                 </div>
                 <div class="mr-5">
-                    Base Airport<br/> YPK Pitt Meadows
+                    <h5>Base Airport</h5><br/> YPK Pitt Meadows
+                    <hr>
+                    <h5>Flights to {airportcount} Airports</h5>
+
+                    {airports}
+                    {community} {id}
+                    <br />
+                    {/airports}
                 </div>
             </div>
             <a class="card-footer text-white clearfix small z-1" href="#">
@@ -24,14 +31,14 @@
                     <i class="fa fa-fw fa-list"></i>
                 </div>
                 <div class="mr-5">
-                    {airports}
-                        {community} {id}
+                    {airplanes}
+                         {id} {planeName} {manufacturer} {model} <hr>
                         <br />
-                    {/airports}
+                    {/airplanes}
                 </div>
             </div>
             <a class="card-footer text-white clearfix small z-1">
-                <span class="float-left">Flights to {airportcount} Airports</span>
+                <span class="float-left">{airplanescount} Fleets available</span>
               </span>
             </a>
         </div>
@@ -49,7 +56,8 @@
                 </div>
             </div>
             <a class="card-footer text-white clearfix small z-1">
-                <span class="float-left">{flightcount} flights a day</span>
+                <span class="float-left">{flightcount} flights available a day</span>
+
               </span>
             </a>
         </div>
@@ -60,9 +68,9 @@
                 <div class="card-body-icon">
                     <i class="fa fa-fw fa-area-chart"></i>
                 </div>
-                <div class="mr-5">Number of bookings!</div>
+                <div class="mr-5">Flight bookings!</div>
             </div>
-            <a class="card-footer text-white clearfix small z-1" href="#">
+            <a class="card-footer text-white clearfix small z-1" href="<?php echo site_url('flightbookings') ?>">
                 <span class="float-left">View Details</span>
                 <span class="float-right">
                 <i class="fa fa-angle-right"></i>

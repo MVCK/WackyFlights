@@ -17,6 +17,7 @@ class Welcome extends Application
         $this->data['airports'] = $this->airports->all();
         $this->data['flights'] = $this->flights->all();
         $this->data['flightcount'] = $this->flights->count;
+        $this->data['airplanescount'] = count($this->airplanes->all());
         $this->data['airportcount'] = count($this->airports->all());
         $this->data['pagetitle'] = 'Home';
         $this->data['pagebody'] = 'dashboard';
