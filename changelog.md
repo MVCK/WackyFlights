@@ -52,7 +52,15 @@ Changelog format: Markdown
 - Linked Flights page to editing page 
  
 
+## Matthew Li 2017-11-12 2:04 PM
+- Added unit-test for entity classes
+- Added unit-test for collection classes
+- Added commenting on classes
+
 ## Hansol Lee 2017-11-12 8:54 PM
 - Edited homepage dashboard to show all info 
 - Fixed flightbookings table row name
+
+## Matthew Li 2017-11-12 10:00 PM
+- Retrieved valid airplane data from wacky server instead of hard coding
 
