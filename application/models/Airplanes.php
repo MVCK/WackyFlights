@@ -31,7 +31,8 @@ class Airplanes extends CSV_Model
         return $config;
     }
 
-    public function find($value) {
+    public function find($value)
+    {
         foreach($this->all() as $plane) {
             foreach($plane as $key => $val) {
                 if($value == $val) {
